@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     /* Base Options: */
+    "baseUrl": ".",
     "outDir": "dist",
+    "rootDir": "src",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "ESNext",
     "module": "ESNext",
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "lib": ["ESNext"],
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleResolution": "Bundler",
@@ -23,12 +25,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
 
-    /* JSX */
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js",
-
     /* Types */
-    "types": ["vite/client", "bun-types", "@testing-library/jest-dom"]
+    "types": ["vite/client", "bun-types"]
   },
-  "exclude": ["node_modules", "coverage", "dist"]
+  "exclude": [
+    "node_modules",
+    "coverage",
+    "dist",
+    "**/__tests__/**",
+    "eslint.config.ts",
+    "vitest.config.ts"
+  ]
 }

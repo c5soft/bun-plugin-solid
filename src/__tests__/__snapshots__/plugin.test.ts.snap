@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BUN PLUGIN: Solid > transforms Solid JSX/TSX for DOM 1`] = `
+"import { template as _$template } from "solid-js/web";
+import { getNextElement as _$getNextElement } from "solid-js/web";
+var _tmpl$ = /*#__PURE__*/_$template(\`<div>Hello Solid\`);
+const App = () => _$getNextElement(_tmpl$);"
+`;
+
+exports[`BUN PLUGIN: Solid > transforms Solid JSX/TSX for SSR 1`] = `
+"import { ssr as _$ssr } from "solid-js/web";
+var _tmpl$ = "<div>Server Rendered</div>";
+const App = () => _$ssr(_tmpl$);"
+`;

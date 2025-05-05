@@ -1,6 +1,5 @@
 import js from "@eslint/js";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
-import solid from "eslint-plugin-solid/configs/typescript";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
@@ -21,42 +20,10 @@ export default tseslint.config(
     },
   },
   {
-    files: ["**/*.ts", "**/*.tsx"],
-    languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: {
-        sourceType: "module",
-        project: "./tsconfig.json",
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        ...globals.browser,
-        ...globals.es2022,
-      },
-    },
-    plugins: solid.plugins,
-    rules: {
-      ...solid.rules,
-      "@typescript-eslint/no-non-null-assertion": "off",
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        {
-          varsIgnorePattern: "^_",
-          argsIgnorePattern: "^_",
-          destructuredArrayIgnorePattern: "^_",
-        },
-      ],
-    },
-  },
-  {
     files: ["__tests__/**/*.ts", "__tests__/**/*.tsx"],
     languageOptions: {
       globals: {
         ...globals.node,
-        ...globals.vitest,
       },
     },
   },

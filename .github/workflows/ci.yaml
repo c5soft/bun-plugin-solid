@@ -18,10 +18,14 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
-          bun-version: 1.2.3
+          bun-version: 1.2.12
       - name: Install Dependencies
         run: bun install --frozen-lockfile
+      - name: Type Check
+        run: bun run typecheck
       - name: Lint Check
         run: bun run lint
       - name: Format Check
         run: bun run format
+      - name: Run Tests
+        run: bun test:cov
