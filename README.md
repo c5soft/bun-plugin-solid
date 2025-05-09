@@ -77,11 +77,9 @@ Use this for runtime-based workflows like server-side rendering (SSR) with Elysi
 #### `bunPreload.ts`:
 
 ```ts
-import { plugin } from "bun";
 import { SolidPlugin } from "@dschz/bun-plugin-solid";
 
-// The `plugin` API automatically registers a BunPlugin
-await plugin(
+await Bun.plugin(
   SolidPlugin({
     generate: "ssr",
     hydratable: true,

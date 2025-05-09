@@ -34,6 +34,55 @@ type SolidPluginOptions = {
 const logPrefix = "\x1b[36m[bun-plugin-solid-jsx]\x1b[0m";
 const warnPrefix = "\x1b[33m[bun-plugin-solid-jsx]\x1b[0m";
 
+/**
+ * A Bun plugin for transforming SolidJS `.tsx`/`.jsx` files at build time using Babel.
+ *
+ * This plugin uses the `babel-preset-solid` and `@babel/preset-typescript` presets to convert Solid JSX
+ * into DOM or SSR-compatible output, depending on the configuration.
+ *
+ * @remarks
+ * - This plugin is **Bun-only** and is designed for use with `bun build` or a Bun preload script.
+ * - It does not run in Node.js, Deno, or browser environments.
+ * - Consumers must provide their own versions of Babel and the required presets as peer dependencies.
+ *
+ * @example
+ * ```ts
+ * // Using Bun.build
+ * import { SolidPlugin } from "@dschz/bun-plugin-solid";
+ *
+ * await Bun.build({
+ *   entrypoints: ["./src/index.ts"],
+ *   outdir: "./dist",
+ *   target: "bun",
+ *   format: "esm",
+ *   plugins: [
+ *     SolidPlugin({
+ *       generate: "ssr",
+ *       hydratable: true,
+ *       sourceMaps: false, // recommended for production
+ *     }),
+ *   ],
+ * });
+ * ```
+ *
+ * * @example
+ * ```ts
+ * // Using Bun.plugin
+ * import { SolidPlugin } from "@dschz/bun-plugin-solid";
+ *
+ * // You must pass this script to `preload` in your `bunfig.toml`
+ * await Bun.plugin(
+ *   SolidPlugin({
+ *     generate: "ssr",
+ *     hydratable: true,
+ *     sourceMaps: true,
+ *   }),
+ * );
+ * ```
+ *
+ * @param options - Configuration for JSX transform behavior, hydration support, source maps, and debug output.
+ * @returns A Bun-compatible plugin object that can be passed to `bun build`.
+ */
 export const SolidPlugin = (options: Partial<SolidPluginOptions> = {}): Bun.BunPlugin => {
   const { generate = "dom", hydratable = true, sourceMaps = "inline", debug = false } = options;
 
