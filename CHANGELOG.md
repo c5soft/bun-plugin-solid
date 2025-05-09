@@ -1,5 +1,11 @@
 # @dschz/bun-plugin-solid
 
+## 1.0.2
+
+### Patch Changes
+
+- Adds JSDoc comments to plugin implementation
+
 ## 1.0.1
 
 ### Patch Changes
