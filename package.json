@@ -1,7 +1,7 @@
 {
   "name": "@dschz/bun-plugin-solid",
   "description": "A Bun plugin for transforming SolidJS TSX/JSX files at runtime or build time using Babel. Supports SSR and DOM output.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Daniel Sanchez",
   "license": "MIT",
   "type": "module",

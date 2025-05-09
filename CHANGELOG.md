@@ -1,5 +1,11 @@
 # @dschz/bun-plugin-solid
 
+## 1.0.1
+
+### Patch Changes
+
+- Updates README and typings
+
 ## 1.0.0
 
 ### Major Changes
