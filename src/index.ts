@@ -1,7 +1,6 @@
 import type { PluginItem } from "@babel/core";
 import tsPreset from "@babel/preset-typescript";
 import solidPreset, { type BabelPresetSolidOptions } from "babel-preset-solid";
-import type { BunPlugin } from "bun";
 
 type SolidPluginOptions = {
   /**
@@ -35,7 +34,7 @@ type SolidPluginOptions = {
 const logPrefix = "\x1b[36m[bun-plugin-solid-jsx]\x1b[0m";
 const warnPrefix = "\x1b[33m[bun-plugin-solid-jsx]\x1b[0m";
 
-export const SolidPlugin = (options: Partial<SolidPluginOptions> = {}): BunPlugin => {
+export const SolidPlugin = (options: Partial<SolidPluginOptions> = {}): Bun.BunPlugin => {
   const { generate = "dom", hydratable = true, sourceMaps = "inline", debug = false } = options;
 
   const debugLog = (msg: string) => {
@@ -88,7 +87,7 @@ export const SolidPlugin = (options: Partial<SolidPluginOptions> = {}): BunPlugi
         };
       });
     },
-  } satisfies BunPlugin;
+  } satisfies Bun.BunPlugin;
 
   return Object.freeze(plugin);
 };

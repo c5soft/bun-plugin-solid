@@ -67,6 +67,9 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "engines": {
+    "bun": ">=1.2.0"
+  },
   "browser": {},
   "typesVersions": {}
 }

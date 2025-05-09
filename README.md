@@ -7,6 +7,8 @@
 MIT Licensed
 
 > 🧩 A Bun plugin for transforming SolidJS JSX/TSX files at runtime or build time using Babel. Supports SSR and DOM output.
+>
+> 🟢 Works seamlessly with [Bun](https://bun.sh) and [Elysia](https://elysiajs.com) servers for both runtime and build-time JSX/TSX transformation.
 
 > ⚠️ **Note**: This plugin is designed specifically for use with the [Bun runtime](https://bun.sh). It will not work in Node.js, Deno, or other JavaScript environments.
 
@@ -21,9 +23,6 @@ MIT Licensed
 ## Installation
 
 ```bash
-npm add -d @dschz/bun-plugin-solid @babel/core @babel/preset-typescript babel-preset-solid
-pnpm add -d @dschz/bun-plugin-solid @babel/core @babel/preset-typescript babel-preset-solid
-yarn add -d @dschz/bun-plugin-solid @babel/core @babel/preset-typescript babel-preset-solid
 bun add -d @dschz/bun-plugin-solid @babel/core @babel/preset-typescript babel-preset-solid
 ```
 
