@@ -95,7 +95,7 @@ export const SolidPlugin = (options: Partial<SolidPluginOptions> = {}): Bun.BunP
   };
 
   const plugin = {
-    name: "bun-plugin-solid-jsx",
+    name: "bun-plugin-solid",
     setup: (build) => {
       let babel: typeof import("@babel/core") | undefined;
       let babelTransformPresets: PluginItem[] | undefined;
