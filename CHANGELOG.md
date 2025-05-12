@@ -1,5 +1,11 @@
 # @dschz/bun-plugin-solid
 
+## 1.0.3
+
+### Patch Changes
+
+- updates jsr config to upload required files only
+
 ## 1.0.2
 
 ### Patch Changes
