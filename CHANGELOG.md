@@ -1,5 +1,11 @@
 # @dschz/bun-plugin-solid
 
+## 1.0.4
+
+### Patch Changes
+
+- Adds badges to readme
+
 ## 1.0.3
 
 ### Patch Changes
