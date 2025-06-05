@@ -4,7 +4,11 @@
 
 # @dschz/bun-plugin-solid
 
-MIT Licensed
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/@dschz/bun-plugin-solid?color=blue)](https://www.npmjs.com/package/@dschz/bun-plugin-solid)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@dschz/bun-plugin-solid)](https://bundlephobia.com/package/@dschz/bun-plugin-solid)
+[![JSR](https://jsr.io/badges/@dschz/bun-plugin-solid/score)](https://jsr.io/@dschz/bun-plugin-solid)
+[![CI](https://github.com/dsnchz/bun-plugin-solid/actions/workflows/ci.yaml/badge.svg)](https://github.com/dsnchz/bun-plugin-solid/actions/workflows/ci.yaml)
 
 > 🧩 A Bun plugin for transforming SolidJS JSX/TSX files at runtime or build time using Babel. Supports SSR and DOM output.
 >
